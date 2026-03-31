@@ -78,12 +78,6 @@ resume-skill-gap-analyzer/
 │   └── skill_extraction.py  # Keyword-based skill matching (180+ skills)
 │
 ├── train_model.py           # ML training script (Kaggle dataset)
-├── models/                  # Saved model artifacts (generated after training)
-│   ├── tfidf_vectorizer.pkl
-│   ├── resume_classifier.pkl
-│   └── label_encoder.pkl
-│
-├── requirements.txt
 └── README.md
 ```
 
@@ -136,17 +130,6 @@ python train_model.py \
   --data UpdatedResumeDataSet.csv \
   --test_size 0.2 \        # 80/20 train-test split
   --max_features 5000      # TF-IDF vocabulary size
-```
-
-### Step 3 — What gets saved
-
-After training, three files are saved in `./models/`:
-
-```
-models/
-├── tfidf_vectorizer.pkl    # Fitted TF-IDF transformer
-├── resume_classifier.pkl   # Trained Logistic Regression model
-└── label_encoder.pkl       # Category label encoder
 ```
 
 ### Expected Training Output
